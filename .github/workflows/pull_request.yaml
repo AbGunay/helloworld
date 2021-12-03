@@ -6,7 +6,7 @@ on:
 
 defaults: 
   run:
-    working-directory: helloworld
+    working-directory: test
 
 jobs:
   build:
