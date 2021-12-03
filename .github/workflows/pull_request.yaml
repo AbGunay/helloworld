@@ -1,0 +1,18 @@
+name: test_pull_request
+on:
+  pull_request:
+    paths:
+      - test/**
+
+defaults: 
+  run:
+  working-directory: helloworld
+
+jobs:
+  build:
+    name: test workflow
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run hello world
+        run: python helloworld.py

@@ -1,0 +1,19 @@
+name: Master run
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - test/**
+
+defaults:
+  run:
+  working-directory: helloworld
+
+jobs:
+  build:
+    name: hello world
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actioins/checkout@v2
+      - run: python helloworld.py
